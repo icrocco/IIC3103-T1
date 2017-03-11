@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Headline:</strong>
+  <%= @press_release.headline %>
+</p>
+
+<p>
+  <strong>Subheadline:</strong>
+  <%= @press_release.subheadline %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @press_release.body %>
+</p>
+
+<%= link_to 'Edit', edit_press_release_path(@press_release) %> |
+<%= link_to 'Back', press_releases_path %>
