@@ -1,41 +1,24 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Headline:</strong>
-  <%= @press_release.headline %>
-</p>
+<h1><%= @press_release.headline %></h1>
 
-<p>
-  <strong>Subheadline:</strong>
-  <%= @press_release.subheadline %>
-</p>
 
-<p>
-  <strong>Body:</strong>
-  <%= @press_release.body %>
-</p>
+<h4><%= @press_release.subheadline %></h4>
+
+
+<%= @press_release.body %>
 
 <br>
+<br>
+<hr>
+<h3><u>Comentarios</u></h3>
 
-<h1>Comentarios</h1>
-<table>
-  <thead>
-    <tr>
-      <th>Autor</th>
-      <th>Comentario</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @comments2.each do |comment| %>
-      <tr>
-        <td><%= comment.author %></td>
-        <td><%= comment.content %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<% @comments2.each do |comment| %>
+    <b><%= comment.author + ': '%></b>
+    <%= comment.content %><br>
+    <%= "------"%><br>
+<% end %>
+<br>
 
 <%= link_to 'Agregar comentario', new_press_release_comment_path(@press_release) %> |
 <%= link_to 'Back', root_path %>

@@ -47,7 +47,7 @@ class PressReleasesController < ApplicationController
   def update
     respond_to do |format|
       if @press_release.update(press_release_params)
-        format.html { redirect_to @press_release, notice: 'Press release was successfully updated.' }
+        format.html { redirect_to press_releases_url, notice: 'Press release was successfully updated.' }
         format.json { render :show, status: :ok, location: @press_release }
       else
         format.html { render :edit }

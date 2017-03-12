@@ -9,6 +9,7 @@
       <th>Bajada</th>
       <th>Cuerpo</th>
       <th>Creada en</th>
+      <th>Comentarios</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -20,6 +21,7 @@
         <td><%= press_release.subheadline %></td>
         <td><%= truncate(press_release.body, :length => 1000, separator: ' ', omission: '') + '...'%></td>
         <td><%= press_release.created_at.strftime("%e %b %Y %H:%M:%S%p") %></td>
+        <td><%= press_release.comments.count %></td>
         <td><%= link_to 'Show', press_release %></td>
       </tr>
     <% end %>
