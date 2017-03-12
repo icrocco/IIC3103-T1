@@ -14,15 +14,13 @@
   </thead>
 
   <tbody>
-    <% @press_releases.each do |press_release| %>
+    <% @press_releases2.each do |press_release| %>
       <tr>
         <td><%= press_release.headline %></td>
         <td><%= press_release.subheadline %></td>
-        <td><%= press_release.body %></td>
+        <td><%= truncate(press_release.body, :length => 10, separator: ' ', omission: '') + '...'%></td>
         <td><%= press_release.created_at.strftime("%e %b %Y %H:%M:%S%p") %></td>
         <td><%= link_to 'Show', press_release %></td>
-        <td><%= link_to 'Edit', edit_press_release_path(press_release) %></td>
-        <td><%= link_to 'Destroy', press_release, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New Press Release', new_press_release_path %>
+<%= link_to 'Administrador', "press_releases#index" %>
