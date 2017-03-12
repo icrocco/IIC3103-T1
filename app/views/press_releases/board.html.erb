@@ -1,13 +1,12 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Noticias</h1>
+<h1><u>Noticias</u></h1><%= link_to 'Ver como administrador', "press_releases#index" %>
 
-<table>
+
+<table border=1 frame=void rules=rows>
   <thead>
     <tr>
-      <th>Titular</th>
-      <th>Bajada</th>
-      <th>Cuerpo</th>
+      <th></th>
       <th>Creada en</th>
       <th>Comentarios</th>
       <th colspan="3"></th>
@@ -17,17 +16,15 @@
   <tbody>
     <% @press_releases2.each do |press_release| %>
       <tr>
-        <td><%= press_release.headline %></td>
-        <td><%= press_release.subheadline %></td>
-        <td><%= truncate(press_release.body, :length => 1000, separator: ' ', omission: '...')%></td>
+        <td><h2><%= press_release.headline %></h2>
+        <h4><%= press_release.subheadline %></h4>
+        <%= truncate(press_release.body, :length => 1000, separator: ' ', omission: '...')%></td>
         <td><%= press_release.created_at.strftime("%e %b %Y %H:%M:%S%p") %></td>
         <td><%= press_release.comments.count %></td>
-        <td><%= link_to 'Show', press_release %></td>
+        <td><%= link_to 'Ver más', press_release %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'Administrador', "press_releases#index" %>

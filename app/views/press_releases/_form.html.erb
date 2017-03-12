@@ -12,21 +12,21 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :headline %>
+    <%= f.label :headline, 'Titular' %>
     <%= f.text_field :headline %>
   </div>
 
   <div class="field">
-    <%= f.label :subheadline %>
+    <%= f.label :subheadline, 'Bajada de título' %>
     <%= f.text_area :subheadline, :maxlength => 250 %>
   </div>
 
   <div class="field">
-    <%= f.label :body %>
+    <%= f.label :body, 'Cuerpo' %>
     <%= f.text_area :body %>
   </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit("Publicar noticia") %>
   </div>
 <% end %>

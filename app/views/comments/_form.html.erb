@@ -12,17 +12,17 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :author %>
+    <%= f.label :author, 'Autor' %>
     <%= f.text_field :author %>
   </div>
 
   <div class="field">
-    <%= f.label :content %>
+    <%= f.label :content, 'Contenido' %>
     <%= f.text_area :content %>
   </div>
 
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit("Publicar comentario") %>
   </div>
 <% end %>

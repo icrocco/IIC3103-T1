@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Noticias</h1>
+<h1><u>Noticias</u></h1>
 
 <table>
   <thead>
@@ -20,9 +20,9 @@
         <td><%= press_release.subheadline %></td>
         <td><%= press_release.body %></td>
         <td><%= press_release.created_at.strftime("%e %b %Y %H:%M:%S%p") %></td>
-        <td><%= link_to 'Show', press_release %></td>
-        <td><%= link_to 'Edit', edit_press_release_path(press_release) %></td>
-        <td><%= link_to 'Destroy', press_release, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Ver', press_release %></td>
+        <td><%= link_to 'Editar', edit_press_release_path(press_release) %></td>
+        <td><%= link_to 'Eliminar', press_release, method: :delete, data: { confirm: '¿Está seguro de eliminar esta noticia?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,5 +30,5 @@
 
 <br>
 
-<%= link_to 'New Press Release', new_press_release_path %>
+<%= link_to 'Escribir nueva noticia', new_press_release_path %>
 <%= link_to 'Ver como usuario', root_path %>
