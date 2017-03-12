@@ -1,4 +1,4 @@
-<%= form_for(comment) do |f| %>
+<%= form_for [@press_release, comment] do |f| %>
   <% if comment.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(comment.errors.count, "error") %> prohibited this comment from being saved:</h2>
@@ -21,10 +21,6 @@
     <%= f.text_area :content %>
   </div>
 
-  <div class="field">
-    <%= f.label :press_release_id %>
-    <%= f.text_field :press_release_id %>
-  </div>
 
   <div class="actions">
     <%= f.submit %>
