@@ -14,11 +14,11 @@
   </thead>
 
   <tbody>
-    <% @press_releases2.each do |press_release| %>
+    <% @press_releases3.each do |press_release| %>
       <tr>
         <td><h2><%= press_release.headline %></h2>
         <h4><%= press_release.subheadline %></h4>
-        <%= truncate(press_release.body, :length => 1000, separator: ' ', omission: '...')%></td>
+        <%= press_release.body%></td>
         <td><%= press_release.created_at.in_time_zone('Brasilia').strftime("%e %b %Y %H:%M:%S%p") %></td>
         <td><%= press_release.comments.count %></td>
         <td><%= link_to 'Ver más', press_release %></td>

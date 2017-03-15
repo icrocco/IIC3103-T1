@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-
+<%= @press_release.created_at.in_time_zone('Brasilia').strftime("%e %b %Y %H:%M:%S%p") %>
 <h1><%= @press_release.headline %></h1>
 
 

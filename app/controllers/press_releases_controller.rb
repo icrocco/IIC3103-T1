@@ -4,11 +4,11 @@ class PressReleasesController < ApplicationController
   # GET /press_releases
   # GET /press_releases.json
   def index
-    @press_releases = PressRelease.all.order('created_at DESC')
+    @press_releases = PressRelease.my_order
   end
 
   def board
-    @press_releases2 = PressRelease.all.order('created_at DESC')
+    @press_releases3 = PressRelease.my_truncate
   end
 
   # GET /press_releases/1
